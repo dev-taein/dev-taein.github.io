@@ -188,6 +188,8 @@ npm install -g gatsby-cli
 
 - Gatsby 프로젝트 만들기
 
+제가 받은 테마는 zoomkoding-gatsby-blog 테마입니다.
+
 ```
 gatsby new [프로젝트 이름] [적용할 테마의 주소]
 gatsby new my-gatsby-blog https://github.com/zoomKoding/zoomkoding-gatsby-blog
@@ -431,27 +433,36 @@ gatsby 플러그인을 설치하기
 ```
 yarn add gatsby-plugin-gtag
 ```
-gatsby프로젝트 디렉토리에서 gatsby-config.js 에 다음 설정을 추가
 
-본인의 경우 Gatsby 테마에 애널리틱스 정보를 입력하는 곳이 있어서 이곳에 측정 ID를 입력함
+본인의 경우 Gatsby 테마에 애널리틱스 정보를 입력하는 곳이 따로 있었습니다.
+
+zoomkoding-gatsby-blog 테마의 경우 gatsby-meta-config.js 에 있습니다.
+
+```
+ga: 'G-측정ID', // Google Analytics Tracking ID
+```
+
 ```
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 측정ID입력,
+        trackingId: 측정ID,
         head: true,
         anonymize: true,
       },
     },
 ```
 
-또는
+
+만약 본인이 받은 gatsby 테마에 구글 애널리틱스 입력하는 곳이 없다면
+
+gatsby프로젝트 디렉토리에서 gatsby-config.js 에 다음 설정을 추가
 
 ```
 {
       resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: {발급받은 측정ID},
+        trackingId: G-측정ID,
         head: false,
         anonymize: true,
       },

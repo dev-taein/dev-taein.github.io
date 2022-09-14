@@ -44,7 +44,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: GHFWZZ1GFP,
+        trackingId: metaConfig.ga,
         head: true,
         anonymize: true,
       },
@@ -52,9 +52,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: metaConfig.title,
+        name: metaConfig.title	,
         short_name: metaConfig.title,
-        description: metaConfig.description,
+        description: metaConfig.adescription,
         lang: `en`,
         display: `standalone`,
         start_url: `/`,
