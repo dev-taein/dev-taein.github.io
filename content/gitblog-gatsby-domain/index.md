@@ -27,7 +27,7 @@ categories: blog
 
 ---
 <details>
-<summary>🐚  Front 개념 알고 가기</summary>
+<summary>🐚  Front 개념 (참고용) </summary>
 
 - SEO(검색엔진최적화)
   - 검색엔진이 웹을 크롤링 하면서 페이지에 컨텐츠 색인을 생성하는 과정
@@ -389,7 +389,7 @@ yarn clean
   - $ vi package.json
   - “./*” 추가하기
   - 변경 전
-```json
+```
         "exports": {
             ".": {
               "require": "./index.js",
@@ -399,7 +399,7 @@ yarn clean
           },
 ```
 - 변경 후
-```json
+```
         "exports": {
             ".": {
               "require": "./index.js",
@@ -418,15 +418,15 @@ yarn clean
 [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
 
 
-깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
-
-템플릿만 가져와서 쓰면 되는 줄 알았지만 프론트쪽 개념이 아예 없었고
-
-빌드만 하면 실패하니..
-
-프론트 쪽도 공부좀 해야겠습니다..
-
-ㅠㅠ
+>깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
+>
+>템플릿만 가져와서 쓰면 되는 줄 알았지만 프론트쪽 개념이 아예 없었고
+>
+>빌드만 하면 실패했습니다..하ㅏ..
+>
+>프론트 쪽도 공부좀 해야겠습니다..
+>
+>ㅠㅠ
 
 ```toc
 ```
