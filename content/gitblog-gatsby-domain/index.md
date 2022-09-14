@@ -385,12 +385,20 @@ yarn clean
     Update this package.json to use a subpath pattern like "./*".
     (Use `node --trace-deprecation ...` to show where the warning was created)
  ```
-    
-- ~~solution :~~ build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방법을 찾아야 할 듯합니다.
-  - /node_modules/postcss-js/package.json 파일수정
-  - $ vi package.json
-  - “./*” 추가하기
-  - 변경 전
+
+node 버전 오류인데 방법을 찾기 힘드네요 ㅠ..
+
+build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방법을 찾아야 할 듯합니다.
+
+- ~~solution :~~ 
+
+~~/node_modules/postcss-js/package.json 파일수정~~
+
+~~$ vi package.json~~
+
+~~“./*” 추가하기~~
+
+- 변경 전
 ```
         "exports": {
             ".": {
