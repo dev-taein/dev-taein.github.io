@@ -1,6 +1,6 @@
 ---
 emoji: ⚓️️
-title: 커스텀 도메인이 있는 GitHub Blog로 Gatsby 사용하기
+title: GitHub Blog Gatsby 테마 사용하고 커스텀 도메인 등록하기
 date: '2022-09-14 19:00:00'
 author: Im Happy
 tags: 블로그 github gatsby
@@ -411,6 +411,52 @@ yarn clean
  ```
         
 </details>
+
+---
+
+## 🧵 Google Search Console 등록하기
+
+[https://search.google.com/search-console/about?hl=ko](https://search.google.com/search-console/about?hl=ko) 여기서
+시작하기 누르셔서 도메인 입력 후 호스팅 사이트에서 DNS 등록하여 확인 받으시면 됩니다.
+
+소유권 인증하고 시간이 좀 걸리는 것 같습니다.
+
+---
+
+## 👟 Google Analytics 이용하기
+[https://analytics.google.com/](https://analytics.google.com/) 여기서 계정 만드시고
+속성 이름이랑 이런 거 작성하신 후 다 만드셨으면 스트림 정보에서 측정 ID를 확인하고
+
+gatsby 플러그인을 설치하기
+```
+yarn add gatsby-plugin-gtag
+```
+gatsby프로젝트 디렉토리에서 gatsby-config.js 에 다음 설정을 추가
+
+본인의 경우 Gatsby 테마에 애널리틱스 정보를 입력하는 곳이 있어서 이곳에 측정 ID를 입력함
+```
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 측정ID입력,
+        head: true,
+        anonymize: true,
+      },
+    },
+```
+
+또는
+
+```
+{
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: {발급받은 측정ID},
+        head: false,
+        anonymize: true,
+      },
+    },
+```
 
 ---
 아래 블로그에서 참고해서 작성했습니다.
