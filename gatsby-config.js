@@ -13,7 +13,7 @@ module.exports = {
 	head: false,
 	anonymize: true,
       },
-    }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
