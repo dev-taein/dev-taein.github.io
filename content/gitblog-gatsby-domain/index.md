@@ -261,8 +261,8 @@ git push -u --force origin main
     yarn build
     netlify deploy --prod
     ```
-    해당 명령어 입력하면 Site name 입력하라고 하는데 엔터치고 넘어가도 상관없습니다.<br/>
-name은 Netlify 사이트에서 변경할 수 있어요.
+    해당 명령어 입력하면 Site name 입력하라고 하는데 엔터치고 넘어가도 상관없습니다.
+    name은 Netlify 사이트에서 변경할 수 있어요.
 
 6. 호스팅 사이트에서 CNAME 변경 (CNAME 레코드 값을 "도메인이름.netlify.app" 으로 변경)
     ![dns_netlify](dns_netlify.png)
@@ -292,7 +292,7 @@ Gatsby 프로젝트 디렉토리로 이동
 ```
 yarn gatsby develop
 ```
-정상적으로 빌드가 되면 localhost:8000 이동해서 확인
+정상적으로 빌드가 되면 localhost:8000 접속해서 확인
 
 
 <details>
