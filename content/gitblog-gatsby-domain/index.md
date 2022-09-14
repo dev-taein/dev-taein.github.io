@@ -2,7 +2,7 @@
 emoji: ⚓️️
 title: GitHub Blog Gatsby 테마 사용하고 커스텀 도메인 등록하기
 date: '2022-09-14 19:00:00'
-author: Im Happy
+author: 장태인
 tags: 블로그 github gatsby
 categories: blog
 ---
@@ -386,7 +386,7 @@ yarn clean
     (Use `node --trace-deprecation ...` to show where the warning was created)
  ```
     
-- solution :
+- ~~solution :~~ build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방법을 찾아야 할 듯합니다.
   - /node_modules/postcss-js/package.json 파일수정
   - $ vi package.json
   - “./*” 추가하기
@@ -411,7 +411,9 @@ yarn clean
             "./": "./"
           },
  ```
-        
+
+
+
 </details>
 
 ---

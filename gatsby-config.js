@@ -30,13 +30,13 @@ module.exports = {
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: 'https://www.imhappycoder.com/sitemap.xml',
+            host: 'https://www.imhappycoder.com',
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: 'https://www.imhappycoder.com/sitemap.xml',
+            host: 'https://www.imhappycoder.com',
           },
         },
       },
