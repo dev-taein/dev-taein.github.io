@@ -195,6 +195,8 @@ gatsby new my-gatsby-blog https://github.com/zoomKoding/zoomkoding-gatsby-blog
 
 테마는 여러분들이 사용하실 테마를 고르신 후 해당 테마의 GitHub URL을 적으시면 됩니다.
 
+Gatsby 테마 모음 사이트 [https://www.gatsbyjs.com/starters/](https://www.gatsbyjs.com/starters/)
+
 - 생성한 Gatsby 프로젝트를 GitHub Repository에 Push해줍니다.
 ```
 git init
@@ -205,7 +207,12 @@ git remote add origin "본인이생성한Repositry주소.git"
 git push -u origin main
 ```
 
-- 만약 push시 아래와 같이 ERORR발생 시
+GitHub에서 repository 확인하여 정상적으로 gatsby 프로젝트가 배포되었는지 확인하기.
+
+<details>
+<summary style="color: red">push하고 [ERORR] 발생 시</summary>
+
+
 ```
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/im-happy-coder/im-happy-coder.github.io.git'
@@ -220,17 +227,76 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 git push -u --force origin main
 ```
+</details>
 
 ---
 
+## 🛕 Netlify 배포 하기
 
+배포 방식은 Netlify와 Github Pages 두 가지 있습니다.
 
+저는 Custom domain을 사용하기 때문에 Netlify가 적절하다고 판단하여 Netlify로 배포하겠습니다.
 
+만약 Cusom domain을 사용하지 않으시면 Github Pages로 배포해주세요.
 
----
+[여기](https://hislogs.com/make-gatsby-blog/) 클릭 하셔서 7.Github Pages로 배포하기 보셔서 하시면 됩니다.
+
+1. Netlify 회원가입 [https://netlify.com](https://netlify.com)
+2. GitHub 계정과 Repository 연동 해주세요(저는 회원가입하고 로그인하니까 연동 할 수 있게 바로 페이지가 뜨더라구요)
+3. Netlify CLI 설치
+    ```
+    npm install -g netlify-cli
+    ```
+4. Gatsby 프로젝트 디렉토리에 netlify.toml 생성
+    ```
+    [build]
+      publish = "public"
+      command = "npm run build"
+    [build.environment]
+      NODE_VERSION = "14"
+      NPM_VERSION = "7.6.0"
+    ```
+5. Netlify에 Gatsby 프로젝트 업로드
+    ```
+    yarn build
+    netlify deploy --prod
+    ```
+    해당 명령어 입력하면 Site name 입력하라고 하는데 엔터치고 넘어가도 상관없습니다.<br/>
+name은 Netlify 사이트에서 변경할 수 있어요.
+
+6. 호스팅 사이트에서 CNAME 변경 (CNAME 레코드 값을 "도메인이름.netlify.app" 으로 변경)
+    ![dns_netlify](dns_netlify.png)
+
+7. Netlify 사이트 설정
+    - 사이트 이름 변경하는 법
+    - Netlify접속 > 본인이 등록한 Repository 클릭 > 상단 맨 왼쪽에 Site Settings 클릭 > 아래 Site infomation에 Change site name 클릭
+   ![rename](rename.png)
+
+8. Netlify Custom domain 등록
+   - Netlify 사이트에 등록된 레포지토리 클릭
+   - Domain settings에 custom domains에 도메인을 입력해 줍니다.
+   - 도메인이 등록 완료되면 아래와 같이 도메인이 확인됩니다.
+   ![netlify_domain](netlify_domain.png)
+   - 아래에 HTTPS 인증도 같이 해주세요
+   ![netlify_https](netlify_https.png)
+
+9. Repository에 push시 자동 배포 설정
+    - Build & Deploy 탭에서 Build settings
+    - Build Command 값 수정 -> CI=false npm run build
+   ![netlify_deploy](netlify_deploy.png)
+    - 이제 repository에 push하면 자동으로 Netlify가 배포를 시작합니다.
+    
+로컬에서 먼저 테스트
+
+Gatsby 프로젝트 디렉토리로 이동
+```
+yarn gatsby develop
+```
+정상적으로 빌드가 되면 localhost:8000 이동해서 확인
+
 
 <details>
-<summary style="color: red"> [ERROR] </summary>
+<summary style="color: red"> Gatsby 빌드 시 [ERROR] 발생 시</summary>
 
 - 빌드 에러 
 ```bash
@@ -293,6 +359,11 @@ git push -u --force origin main
 ```
   npm install @mui/material @emotion/react @emotion/styled
 ```
+
+- yarn clean 한번 씩 시도 해보고 다시 해보세요..
+```
+yarn clean
+```
         
 - node:internal/modules/cjs/loader:959가 발생하면 
 ```
@@ -346,7 +417,6 @@ git push -u --force origin main
 
 [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
 
----
 
 깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
 
