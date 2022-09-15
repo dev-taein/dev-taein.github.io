@@ -37,14 +37,14 @@ module.exports = {
             policy: [{ userAgent: '*' }],
           },
           'branch-deploy': {
-            policy: [{ userAgent: '*', allow: '/' }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: 'https://www.imhappycoder.com/sitemap.xml',
-            host: 'https://www.imhappycoder.com/',
+            host: 'https://www.imhappycoder.com',
           },
           'deploy-preview': {
-            policy: [{ userAgent: '*', allow: '/' }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: 'https://www.imhappycoder.com/sitemap.xml',
-            host: 'https://www.imhappycoder.com/',
+            host: 'https://www.imhappycoder.com',
           },
         },
       },
