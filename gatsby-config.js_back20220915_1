@@ -42,7 +42,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: metaConfig.ga,
         head: false,
@@ -122,7 +122,6 @@ module.exports = {
     },
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-gtag`,
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,

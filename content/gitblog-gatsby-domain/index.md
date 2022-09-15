@@ -15,6 +15,7 @@ categories: blog
 > Homebrew v3.6.1
 > 
 > node v16.17.0
+> 14.20.0_1
 > 
 > npm v8.15.0
 > 

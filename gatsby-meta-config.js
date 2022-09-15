@@ -9,7 +9,7 @@ module.exports = {
       repo: `im-happy-coder/im-happy-coder.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
-  ga: 'UA-241119452-1', // Google Analytics Tracking ID
+  ga: 'G-GHFWZZ1GFP', // Google Analytics Tracking ID
   author: {
     name: `장태인`,
     bio: {
