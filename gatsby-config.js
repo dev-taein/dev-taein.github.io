@@ -7,14 +7,6 @@ module.exports = {
 
   plugins: [
     {
-      resolve: `gatsby-plugin-gtag`,
-      option: {
-        trackingId: `G-GHFWZZ1GFP`,
-	head: false,
-	anonymize: true,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
@@ -131,7 +123,6 @@ module.exports = {
     `gatsby-theme-material-ui`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-advanced-sitemap`,
-    `gatsby-plugin-gtag`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
     `gatsby-plugin-offline`,

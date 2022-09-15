@@ -386,7 +386,7 @@ yarn clean
     (Use `node --trace-deprecation ...` to show where the warning was created)
  ```
 
-node 버전 오류인데 방법을 찾기 힘드네요 ㅠ..
+node 버전 오류인데 Node버전을 다시 업그레이드하면 또 에러 발생할 거 같아서..일단 보류 했습니다.
 
 build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방법을 찾아야 할 듯합니다.
 
