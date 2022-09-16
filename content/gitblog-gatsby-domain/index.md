@@ -7,6 +7,9 @@ tags: 블로그 github gatsby
 categories: blog
 ---
 
+Github Blog를 만들고 Custom domain을 이용하여 Netlify 자동 배포를 구성하기
+
+
 ## 💦 환경
 
 > macOs (BigSur v11.6.1)
@@ -14,8 +17,7 @@ categories: blog
 > 
 > Homebrew v3.6.1
 > 
-> node v16.17.0
-> 14.20.0_1
+> node v14.20.0
 > 
 > npm v8.15.0
 > 
@@ -177,6 +179,7 @@ Page에서 Custom domain에 구입한 도메인을 입력하고 DNS Check를 해
 
 Custom domain을 설정하고 나면 CNAME 파일이 레포지토리에 자동 생성됩니다.
 
+
 ---
 
 ## 🌼 Gatsby 테마 사용하기
@@ -210,7 +213,22 @@ git remote add origin "본인이생성한Repositry주소.git"
 git push -u origin main
 ```
 
-GitHub에서 repository 확인하여 정상적으로 gatsby 프로젝트가 배포되었는지 확인하기.
+GitHub에서 repository 확인하여 정상적으로 gatsby 프로젝트가 배포되었는지 확인해 보세요
+
+그리고 본인이 구매한 도메인으로 접속해서 페이지가 정상적으로 나온다면 성공입니다.
+
+
+### 🩲 localhost로 확인하는 방법
+
+Gatsby 프로젝트 디렉토리로 이동
+```
+yarn gatsby develop
+```
+정상적으로 빌드가 되면 localhost:8000 접속해서 확인
+
+yarn gatsby serve는 9000포트 테스트 서버
+
+yarn gatsby develop는 8000포트 개발 서버
 
 <details>
 <summary style="color: red">push하고 [ERORR] 발생 시</summary>
@@ -240,10 +258,12 @@ git push -u --force origin main
 
 저는 Custom domain을 사용하기 때문에 Netlify가 적절하다고 판단하여 Netlify로 배포하겠습니다.
 
+### 🧶 Github Pages로 배포하려면 ?
 만약 Cusom domain을 사용하지 않으시면 Github Pages로 배포해주세요.
 
 [여기](https://hislogs.com/make-gatsby-blog/) 클릭 하셔서 7.Github Pages로 배포하기 보셔서 하시면 됩니다.
 
+### 🪢  Netlify 배포 시작
 1. Netlify 회원가입 [https://netlify.com](https://netlify.com)
 2. GitHub 계정과 Repository 연동 해주세요(저는 회원가입하고 로그인하니까 연동 할 수 있게 바로 페이지가 뜨더라구요)
 3. Netlify CLI 설치
@@ -267,7 +287,8 @@ git push -u --force origin main
     해당 명령어 입력하면 Site name 입력하라고 하는데 엔터치고 넘어가도 상관없습니다.
     name은 Netlify 사이트에서 변경할 수 있어요.
 
-6. 호스팅 사이트에서 CNAME 변경 (CNAME 레코드 값을 "도메인이름.netlify.app" 으로 변경)
+6. 호스팅 사이트에서 CNAME 변경 (CNAME 레코드 값을 "도메인이름.netlify.app" 으로 변경)<br/>
+전에 등록한 Github의 A레코드는 필요없습니다. 삭제해주세요.
     ![dns_netlify](dns_netlify.png)
 
 7. Netlify 사이트 설정
@@ -277,8 +298,8 @@ git push -u --force origin main
 
 8. Netlify Custom domain 등록
    - Netlify 사이트에 등록된 레포지토리 클릭
-   - Domain settings에 custom domains에 도메인을 입력해 줍니다.
-   - 도메인이 등록 완료되면 아래와 같이 도메인이 확인됩니다.
+   - Domain settings에 custom domains에 본인 도메인을 입력해 줍니다.
+   - 도메인이 등록 완료되면 아래와 같이 도메인이 확인됩니다. (시간이 좀 걸릴 수도 있어요)
    ![netlify_domain](netlify_domain.png)
    - 아래에 HTTPS 인증도 같이 해주세요
    ![netlify_https](netlify_https.png)
@@ -287,17 +308,8 @@ git push -u --force origin main
     - Build & Deploy 탭에서 Build settings
     - Build Command 값 수정 -> CI=false npm run build
    ![netlify_deploy](netlify_deploy.png)
-    - 이제 repository에 push하면 자동으로 Netlify가 배포를 시작합니다.
+    - 이제 Github repository에 push하면 자동으로 Netlify가 배포를 시작합니다.
     
-로컬에서 먼저 테스트
-
-Gatsby 프로젝트 디렉토리로 이동
-```
-yarn gatsby develop
-```
-정상적으로 빌드가 되면 localhost:8000 접속해서 확인
-
-
 <details>
 <summary style="color: red"> Gatsby 빌드 시 [ERROR] 발생 시</summary>
 
@@ -350,17 +362,17 @@ yarn gatsby develop
     
 - solution :
   - 해당 에러의 경우 삽질을 너무 많이해서 원인을 제대로 파악하진 못하였다..   
-  - 일단 node의 버전을 다운 그레이드 (v18 —> v16)
+  - 일단 node의 버전을 다운 그레이드 (v18 —> v14)
 ```
     brew unlink node@18
-    brew install node@16
-    brew link node@16
+    brew install node@14
+    brew link node@14
  ```
         
 - 추가적으로 패키지 설치도 한번 해보세요
         
 ```
-  npm install @mui/material @emotion/react @emotion/styled
+  yarn install @mui/material @emotion/react @emotion/styled
 ```
 
 - yarn clean 한번 씩 시도 해보고 다시 해보세요..
@@ -370,12 +382,11 @@ yarn clean
         
 - node:internal/modules/cjs/loader:959가 발생하면 
 ```
-1. npm cache clean --force
+1. yarn cache clean --force
 2. node_modules 폴더 삭제
 3. package-lock.json 파일 삭제
-4. npm install
+4. yarn install
 ````        
-    
 ---
     
 - 로컬에서 gatsby실행 시 에러
@@ -387,41 +398,11 @@ yarn clean
     (Use `node --trace-deprecation ...` to show where the warning was created)
  ```
 
-node 버전 오류인데 Node버전을 다시 업그레이드하면 또 에러 발생할 거 같아서..일단 보류 했습니다.
+- solution :
 
-build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방법을 찾아야 할 듯합니다.
+  - node 버전 오류인데 node18 > node16으로 변경하고 위와 같은 에러가 발생하였고
 
-- ~~solution :~~ 
-
-~~/node_modules/postcss-js/package.json 파일수정~~
-
-~~$ vi package.json~~
-
-~~“./*” 추가하기~~
-
-- 변경 전
-```
-        "exports": {
-            ".": {
-              "require": "./index.js",
-              "import": "./index.mjs"
-            },
-            "./": "./"
-          },
-```
-- 변경 후
-```
-        "exports": {
-            ".": {
-              "require": "./index.js",
-              "import": "./index.mjs"
-            },
-            "./*": "./*",
-            "./": "./"
-          },
- ```
-
-
+  - node 버전을 14로 변경하여 해결하였습니다.
 
 </details>
 
@@ -429,45 +410,124 @@ build할 때 초기화되서 스크립트 수정해도 똑같네요 다른 방�
 
 ## 🧵 Google Search Console 등록하기
 
-[https://search.google.com/search-console/about?hl=ko](https://search.google.com/search-console/about?hl=ko) 여기서
-시작하기 누르셔서 도메인 입력 후 호스팅 사이트에서 DNS 등록하여 확인 받으시면 됩니다.
+[https://search.google.com/search-console/about?hl=ko](https://search.google.com/search-console/about?hl=ko) 로그인하기
 
-소유권 인증하고 시간이 좀 걸리는 것 같습니다.
+시작하기 누르시면 소유권 확인하는 창이 나오는데 왼쪽에 본인 도메인을 입력하면
+
+TXT 도메인 레코드를 줍니다. 그걸 복사해서 본인 호스팅 사이트에서 새 레코드 추가해 주세요.
+
+그러면 소유권 확인이 끝나고 조금 시간뒤에 Google search console에 접속 하실 수 있습니다.
+
+저는 30분 기다려야 Search Console창이 나오더라구요
+
+그리고 Gatsby 테마 마다 Google Search Console, Google Analytics 설정 방법이 다를 수 있습니다.
+
+저의 테마의 경우 zoomkoding-gatsby-blog을 사용합니다.
+
+- sitemap 플러그인 설치
+```
+yarn install gatsby-plugin-advanced-sitemap
+```
+
+- gatsby-config.js 파일에서 gatsby-plugin-robots-txt 수정
+- sitemap, host에 본인이 커스텀 도메인 적어주세요.
+```js
+{
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }],
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', allow: '/' }],
+            sitemap: 'https://www.your_custom_domain/sitemap.xml',
+            host: 'https://www.your_custom_domain/',
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', allow: '/' }],
+            sitemap: 'https://www.your_custom_domain/sitemap.xml',
+            host: 'https://www.your_custom_domain/',
+          },
+        },
+      },
+    }
+```
+- gatsby-config.js 파일 하단에 아래와 같은 플러그인이 명시되었는지 확인
+```
+`gatsby-plugin-advanced-sitemap`
+```
+
+- 로컬에서 확인
+```
+yarn gatsby develop
+```
+
+- 아래와 같이 뜨면 성공
+![sitemap](sitemap.png)
+
+- 변경사항을 Netlify에 배포 한 후 Google Search Console 접속
+- 새 사이트맵 추가탭에 아래 url 2개 추가
+  - https://www.your_custom_domain/sitemap.xml
+  - https://www.your_custom_domain/sitemap-pages.xml
+  ![google_sitemap](google_sitemap.png)
+
+위 사진과 같이 성공이라는 메시지가 뜬 후
+
+- sitemap 색인 요청하기
+![google_sitemap_2](google_sitmap_2.png)
+
+- 위 사진은 색인요청이 완료된 화면이고 사진의 번호만 봐주세요
+  - 1번 클릭해서 2번 URL창에 https://www.your_custom_domain/sitemap.xml 입력
+  - 3번 색인 요청 버튼 클릭하셔서 요청하시면 됩니다.
+  - 똑같이 https://www.your_custom_domain/sitemap-pages.xml도 색인요청 해주세요
+
+- 조금 시간이 지난 뒤에 다시 URL 검사하시면 위 사진처럼  "URL이 Google에 등록되어 있음"이라는 메시지가 보일 겁니다.
+- 구글에서 본인 도메인을 검색해보세요.
+![google_sitemap_3](google_sitemap_3.png)
 
 ---
 
 ## 👟 Google Analytics 이용하기
-[https://analytics.google.com/](https://analytics.google.com/) 여기서 계정 만드시고
-속성 이름이랑 이런 거 작성하신 후 다 만드셨으면 스트림 정보에서 측정 ID를 확인하고
+[https://analytics.google.com/](https://analytics.google.com/) 접속
+
+속성 이름이랑 이런 거 작성하신 후 다 만드셨으면 스트림 정보에서 측정 ID를 확인하세요<br/>
+측정ID는 구글 애널리틱스 사이트에 > 왼쪽 하단에 관리 > 데이터 스트림 > 본인 도메인 클릭<br/>
+에서 보시면 됩니다.
+
 
 gatsby 플러그인을 설치하기
 ```
 yarn add gatsby-plugin-gtag
 ```
 
-본인의 경우 Gatsby 테마에 애널리틱스 정보를 입력하는 곳이 따로 있었습니다.
-
+제가 사용하는 테마는 trackingId를 입력하는 곳이 따로 있었습니다. <br/>
 zoomkoding-gatsby-blog 테마의 경우 gatsby-meta-config.js 에 있습니다.
 
 ```
 ga: 'G-측정ID', // Google Analytics Tracking ID
 ```
 
-```
-    {
-      resolve: `gatsby-plugin-google-analytics`,
+- gatsby-config.js 파일 수정
+```js
+  {
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: 측정ID,
-        head: true,
+        trackingId: metaConfig.ga,
+        head: false,
         anonymize: true,
       },
     },
 ```
+- gatsby-config.js 파일 하단에 아래와 같은 플러그인이 명시되었는지 확인
+```
+`gatsby-plugin-gtag`
+```
 
+만약 본인의 gatsby 테마에 측정ID 입력하는 곳이 없다면
 
-만약 본인이 받은 gatsby 테마에 구글 애널리틱스 입력하는 곳이 없다면
-
-gatsby프로젝트 디렉토리에서 gatsby-config.js 에 다음 설정을 추가
+아래와 같이 trackingId 부분에 본인 측정ID 적으면 됩니다.
 
 ```
 {
@@ -481,20 +541,25 @@ gatsby프로젝트 디렉토리에서 gatsby-config.js 에 다음 설정을 추�
 ```
 
 ---
-아래 블로그에서 참고해서 작성했습니다.
 
-[https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
+- 참고
+  - [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
+  - [https://www.junwork.net/blog-google-search-console/](https://www.junwork.net/blog-google-search-console/)
+  - [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
 
+---
 
->깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
->
->템플릿만 가져와서 쓰면 되는 줄 알았지만 프론트쪽 개념이 아예 없었고
->
->빌드만 하면 실패했습니다..하ㅏ..
->
->프론트 쪽도 공부좀 해야겠습니다..
->
->ㅠㅠ
+깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
+
+템플릿만 가져와서 쓰면 되는 줄 알았지만 프론트쪽 개념이 아예 없었고
+
+빌드만 하면 실패했습니다..하ㅏ..
+ 
+구글 애널리틱스랑 sitemap도 사용할 줄 몰라서 오래 걸렸어요...
+
+프론트쪽 공부좀 해야겠습니다..
+
+ㅠㅠ
 
 ```toc
 ```
