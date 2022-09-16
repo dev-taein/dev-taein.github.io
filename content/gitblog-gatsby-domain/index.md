@@ -9,7 +9,6 @@ categories: blog
 
 Github Blog를 만들고 Custom domain을 이용하여 Netlify 자동 배포를 구성하기
 
-
 ## 💦 환경
 
 > macOs (BigSur v11.6.1)
@@ -263,7 +262,7 @@ git push -u --force origin main
 
 [여기](https://hislogs.com/make-gatsby-blog/) 클릭 하셔서 7.Github Pages로 배포하기 보셔서 하시면 됩니다.
 
-### 🪢  Netlify 배포 시작
+### 👒 Netlify 배포 시작
 1. Netlify 회원가입 [https://netlify.com](https://netlify.com)
 2. GitHub 계정과 Repository 연동 해주세요(저는 회원가입하고 로그인하니까 연동 할 수 있게 바로 페이지가 뜨더라구요)
 3. Netlify CLI 설치
@@ -555,11 +554,9 @@ ga: 'G-측정ID', // Google Analytics Tracking ID
 
 빌드만 하면 실패했습니다..하ㅏ..
  
-구글 애널리틱스랑 sitemap도 사용할 줄 몰라서 오래 걸렸어요...
+구글 애널리틱스랑 sitemap에서도 계속 헤맸습니다...
 
-프론트쪽 공부좀 해야겠습니다..
-
-ㅠㅠ
+프론트쪽 공부도 좀 해야겠습니다..😭
 
 ```toc
 ```
