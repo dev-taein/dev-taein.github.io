@@ -14,13 +14,13 @@ module.exports = {
     name: `장태인`,
     bio: {
       role: `행복한`,
-      description: ['늘 새로운 꿈에 도전하는', '오늘도 파이팅', '행복을 꿈꾸는'],
+      description: ['매우', '너무', '정말'],
       thumbnail: 'sample.png', // Path to the image in the 'asset' folder
     },
     social: {
-      github: ``, // `https://github.com/zoomKoding`,
-      linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
-      email: ``, // `zoomkoding@gmail.com`,
+      github: `https://github.com/im-happy-coder`, // `https://github.com/zoomKoding`,
+      linkedIn: `https://www.linkedin.com/in/taein-jang-3a03ab20b/`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      email: `dev.taein@gmail.com`, // `zoomkoding@gmail.com`,
     },
   },
 
@@ -43,12 +43,19 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        date: '2021.02 ~',
-        activity: '개인 블로그 개발 및 운영',
+        date: '2022.05 ~ 2022.06',
+        activity: 'Docker로 만든 개발 놀이터',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: '/docker-devland',
+          github: 'https://github.com/im-happy-coder/docker-devland',
+        },
+      },
+      {
+        date: '2022.06 ~ 2022.07',
+        activity: 'VM환경에서 3Tier 구성하기',
+        links: {
+          post: '/vm3tier',
+          github: 'https://github.com/im-happy-coder/vm3tier',
         },
       },
     ],
@@ -72,15 +79,25 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        title: '개발 블로그 테마 개발',
+        title: 'Docker 개발 환경 구성',
         description:
-          '개발 블로그를 운영하는 기간이 조금씩 늘어나고 점점 많은 생각과 경험이 블로그에 쌓아가면서 제 이야기를 담고 있는 블로그를 직접 만들어보고 싶게 되었습니다. 그동안 여러 개발 블로그를 보면서 좋았던 부분과 불편했던 부분들을 바탕으로 레퍼런스를 참고하여 직접 블로그 테마를 만들게 되었습니다.',
-        techStack: ['gatsby', 'react'],
-        thumbnailUrl: 'blog.png',
+          'Docker를 사용하여 어디서든 개발 환경을 구성할 수 있도록 컨테이너화 했습니다. ',
+        techStack: ['docker', 'CentOS', 'java', 'spring'],
+        thumbnailUrl: 'docker-devland.png',
         links: {
-          post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          post: '/docker-devland',
+          github: 'https://github.com/im-happy-coder/docker-devland',
+        },
+      },
+      {
+        title: 'VM환경에서 3Tier 구성',
+        description:
+            'Docker를 사용하여 어디서든 개발 환경을 구성할 수 있도록 컨테이너화 했습니다. ',
+        techStack: ['CentOS', 'apache', 'tomcat', 'mysql', 'svn', 'jenkins'],
+        thumbnailUrl: '3tier.png',
+        links: {
+          post: '/vm3tier',
+          github: 'https://github.com/im-happy-coder/vm3tier',
         },
       },
     ],
