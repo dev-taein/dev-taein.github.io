@@ -92,7 +92,7 @@ module.exports = {
       {
         title: 'VM환경에서 3Tier 구성',
         description:
-            'Docker를 사용하여 어디서든 개발 환경을 구성할 수 있도록 컨테이너화 했습니다. ',
+            'VM환경에서 3Tier 구성입니다. ',
         techStack: ['CentOS', 'apache', 'tomcat', 'mysql', 'svn', 'jenkins'],
         thumbnailUrl: '3tier.png',
         links: {
