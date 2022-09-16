@@ -2,7 +2,7 @@
 emoji: ⚓️️
 title: GitHub Blog Gatsby 테마 사용하고 커스텀 도메인 등록하기
 date: '2022-09-14 19:00:00'
-author: 장태인
+author: 아임해피
 tags: 블로그 github gatsby
 categories: blog
 ---
