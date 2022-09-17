@@ -44,7 +44,7 @@ module.exports = {
       // ========================================================
       {
         date: '2022.05 ~ 2022.06',
-        activity: 'Docker로 만든 개발 놀이터',
+        activity: 'Docker 개발 환경 구성',
         links: {
           post: '/docker-devland',
           github: 'https://github.com/im-happy-coder/docker-devland',
@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         date: '2022.06 ~ 2022.07',
-        activity: 'VM환경에서 3Tier 구성하기',
+        activity: 'VM환경에서 3Tier 구성',
         links: {
           post: '/vm3tier',
           github: 'https://github.com/im-happy-coder/vm3tier',
