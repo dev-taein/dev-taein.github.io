@@ -9,6 +9,24 @@ categories: blog
 
 Github Blog를 만들고 Gatsby 테마 적용하기 Custom domain을 이용하여 Netlify 자동 배포를 구성하기
 
+## 💦 환경
+
+> macOs (BigSur v11.6.1)
+>
+>
+> Homebrew v3.6.1
+>
+> node v14.20.0
+>
+> npm v8.15.0
+>
+> yarn v1.22.19
+>
+> Gatsby CLI v4.22.1
+>
+> Gatsby v4.9.3
+>
+
 ---
 
 ## 🏹  GitHub 설정
@@ -422,27 +440,7 @@ ga: 'G-측정ID', // Google Analytics Tracking ID
 - 참고
   - [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
   - [https://www.junwork.net/blog-google-search-console/](https://www.junwork.net/blog-google-search-console/)
-
----
-
-## 💦 환경
-
-> macOs (BigSur v11.6.1)
->
->
-> Homebrew v3.6.1
->
-> node v14.20.0
->
-> npm v8.15.0
->
-> yarn v1.22.19
->
-> Gatsby CLI v4.22.1
->
-> Gatsby v4.9.3
->
-
+  
 ---
 
 깃허브로 블로그 만드는 데 오래 안 걸릴 줄 알았지만 엄청 애를 먹었습니다..
