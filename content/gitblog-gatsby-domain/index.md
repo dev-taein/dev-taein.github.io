@@ -326,7 +326,7 @@ yarn install gatsby-plugin-advanced-sitemap
 
 - gatsby-config.js 파일에서 gatsby-plugin-robots-txt 수정
 - sitemap, host에 본인이 커스텀 도메인 적어주세요.
-```js
+```
 {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
@@ -405,7 +405,7 @@ ga: 'G-측정ID', // Google Analytics Tracking ID
 ```
 
 - gatsby-config.js 파일 수정
-```js
+```
   {
       resolve: `gatsby-plugin-gtag`,
       options: {
@@ -453,5 +453,8 @@ ga: 'G-측정ID', // Google Analytics Tracking ID
 
 프론트쪽 공부도 좀 해야겠습니다..😭
 
+
+
 ```toc
+
 ```
