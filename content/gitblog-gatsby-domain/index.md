@@ -422,7 +422,6 @@ ga: 'G-측정ID', // Google Analytics Tracking ID
 - 참고
   - [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
   - [https://www.junwork.net/blog-google-search-console/](https://www.junwork.net/blog-google-search-console/)
-  - [https://hislogs.com/make-gatsby-blog/](https://hislogs.com/make-gatsby-blog/)
 
 ---
 
