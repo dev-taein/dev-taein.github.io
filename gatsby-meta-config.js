@@ -50,14 +50,6 @@ module.exports = {
           github: 'https://github.com/im-happy-coder/docker-devland',
         },
       },
-      {
-        date: '2022.06 ~ 2022.07',
-        activity: 'VM환경에서 3Tier 구성',
-        links: {
-          post: '/vm3tier',
-          github: 'https://github.com/im-happy-coder/vm3tier',
-        },
-      },
     ],
 
     projects: [
@@ -83,20 +75,10 @@ module.exports = {
         description:
           'Docker를 사용하여 어디서든 개발 환경을 구성할 수 있도록 컨테이너화 했습니다. ',
         techStack: ['docker', 'CentOS', 'java', 'spring'],
-        thumbnailUrl: 'docker-devland.png',
+        thumbnailUrl: 'docker-devland.jpg',
         links: {
           post: '/docker-devland',
           github: 'https://github.com/im-happy-coder/docker-devland',
-        },
-      },
-      {
-        title: 'VM환경에서 3Tier 구성',
-        description:
-            'VM환경에서 3Tier 구성입니다. ',
-        techStack: ['CentOS', 'apache', 'tomcat', 'mysql', 'svn', 'jenkins'],
-        thumbnailUrl: '3tier.png',
-        links: {
-          post: '/vm3tier',
         },
       },
     ],
