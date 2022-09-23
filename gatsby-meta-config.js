@@ -97,7 +97,6 @@ module.exports = {
         thumbnailUrl: '3tier.png',
         links: {
           post: '/vm3tier',
-          github: 'https://github.com/im-happy-coder/vm3tier',
         },
       },
     ],
