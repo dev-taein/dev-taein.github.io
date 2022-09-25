@@ -15,7 +15,7 @@ module.exports = {
     bio: {
       role: `행복한`,
       description: ['매우', '너무', '정말'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      thumbnail: 'emoji.jpg', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/im-happy-coder`, // `https://github.com/zoomKoding`,
@@ -92,7 +92,7 @@ module.exports = {
         title: 'VM환경에서 3Tier 구축 하기',
         description:
           'VM환경에서 3Tier Architecture 설계하여 웹서버, WAS, DB 역할을 분리하였고, 가장 기본이 되는 개발 프로세스 구축하였습니다. ',
-        techStack: ['Virtualbox', 'CenOS7', 'Apache', 'Tomcat', 'JAVA', 'Jenkins', 'MySQL', 'Maven'],
+        techStack: ['Virtualbox', 'CentOS7', 'Apache', 'Tomcat', 'JAVA', 'Jenkins', 'MySQL', 'Maven'],
         thumbnailUrl: 'vm3tier.jpg',
         links: {
           post: '/vm3tier',
