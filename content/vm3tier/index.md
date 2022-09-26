@@ -1,6 +1,6 @@
 ---
 emoji: 🧼
-title: VM환경에서 3Tier 구축 하기
+title: VM환경에서 3Tier 구축 하기 (toy_project)
 date: '2022-09-25'
 author: 장태인
 tags: vm 3tier 

@@ -44,7 +44,7 @@ module.exports = {
       // ========================================================
       {
         date: '2022.05 ~ 2022.06',
-        activity: 'Docker 개발 환경 구성',
+        activity: 'Docker 개발 환경 구성 (toy_project)',
         links: {
           post: '/docker-devland',
           github: 'https://github.com/im-happy-coder/docker-devland',
@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         date: '2022.04 ~ 2022.05',
-        activity: 'VM환경에서 3Tier 구축 하기',
+        activity: 'VM환경에서 3Tier 구축 하기 (toy_project)',
         links: {
           post: '/vm3tier',
         },
@@ -78,7 +78,7 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        title: 'Docker 개발 환경 구성',
+        title: 'Docker 개발 환경 구성 (toy_project)',
         description:
           'Docker를 사용하여 어디서든 개발 환경을 구성할 수 있도록 컨테이너화 했습니다. ',
         techStack: ['Docker', 'Container', 'Docker-compose', 'registry'],
@@ -89,7 +89,7 @@ module.exports = {
         },
       },
       {
-        title: 'VM환경에서 3Tier 구축 하기',
+        title: 'VM환경에서 3Tier 구축 하기 (toy_project)',
         description:
           'VM환경에서 3Tier Architecture 설계하여 웹서버, WAS, DB 역할을 분리하였고, 가장 기본이 되는 개발 프로세스 구축하였습니다. ',
         techStack: ['Virtualbox', 'CentOS7', 'Apache', 'Tomcat', 'JAVA', 'Jenkins', 'MySQL', 'Maven'],
