@@ -57,6 +57,20 @@ module.exports = {
           post: '/vm3tier',
         },
       },
+      {
+        date: '2021.06 ~ 2022.07',
+        activity: '스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (toy_project)',
+        links: {
+	  github: 'https://github.com/im-happy-coder/springboot-aws-deploy',
+        },
+      },    
+      {
+        date: '2021.03',
+        activity: 'JSP로 구현한 쇼핑몰 (toy_project)',
+        links: {
+          github: 'https://github.com/im-happy-coder/jsp-webmarket',
+        },
+      },
     ],
 
     projects: [
@@ -96,6 +110,26 @@ module.exports = {
         thumbnailUrl: 'vm3tier.jpg',
         links: {
           post: '/vm3tier',
+        },
+      },
+      {
+        title: '스프링 부트와 AWS로 혼자 구현하는 웹 서비스 (toy_project)',
+        description:
+          '스프링부트와 AWS Cloud를 이용하여 CI, CD 구현 및 무중단 배포까지 학습하기 위한 프로젝트',
+        techStack: ['Spring-boot', 'AWS', 'CI/CD'],
+        thumbnailUrl: 'spring-aws.png',
+        links: {
+	  github: 'https://github.com/im-happy-coder/springboot-aws-deploy',	
+        },
+      },
+      {
+        title: 'JSP로 구현한 쇼핑몰 (toy_project)',
+        description:
+          'JSP를 이용하여 웹사이트의 기본 CRUD 구현하기',
+        techStack: ['JAVA', 'JSP'],
+        thumbnailUrl: 'jsp-webmarket.gif',
+        links: {
+          github: 'https://github.com/im-happy-coder/jsp-webmarket',
         },
       },
     ],
