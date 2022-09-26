@@ -9,7 +9,8 @@ categories: tomcat
 
 
 - **JMX Set**
-    - jmx lib에 추가 [https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina-jmx-remote](https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina-jmx-remote)
+    - tomcat/lib 디렉토리에 jmx lib에 추가
+    - [https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina-jmx-remote](https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina-jmx-remote)
     - jmx보는 방법은 jdk 디렉토리에서 jconsole 실행
 
 ## Tomcat 설정
