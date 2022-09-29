@@ -30,7 +30,7 @@ $ vi bin/catalina.sh
 CATALINA_OUT="$CATALINA_BASE"/logs/catalina.out    
 
 # After
-CATALINA_OUT=/engn003/logs/catalina.out                   
+CATALINA_OUT=/engn003/logs/was/catalina.out                   
 
 ```
 
@@ -79,7 +79,7 @@ After
 ```xml
 catalina.org.apache.juli.AsyncFileHandler.level = FINE
 
-catalina.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+catalina.org.apache.juli.AsyncFileHandler.directory = /engn003/logs/was
 
 catalina.org.apache.juli.AsyncFileHandler.prefix = catalina.
 
@@ -87,7 +87,7 @@ catalina.org.apache.juli.AsyncFileHandler.encoding = UTF-8
 
 localhost.org.apache.juli.AsyncFileHandler.level = FINE
 
-localhost.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+localhost.org.apache.juli.AsyncFileHandler.directory = /engn003/logs/was
 
 localhost.org.apache.juli.AsyncFileHandler.prefix = localhost.
 
@@ -95,7 +95,7 @@ localhost.org.apache.juli.AsyncFileHandler.encoding = UTF-8
 
 manager.org.apache.juli.AsyncFileHandler.level = FINE
 
-manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs/was
 
 manager.org.apache.juli.AsyncFileHandler.prefix = manager.
 
@@ -103,7 +103,7 @@ manager.org.apache.juli.AsyncFileHandler.encoding = UTF-8
 
 host-manager.org.apache.juli.AsyncFileHandler.level = FINE
 
-host-manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+host-manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs/was
 
 host-manager.org.apache.juli.AsyncFileHandler.prefix = host-manager.
 
