@@ -4,7 +4,7 @@ title: VM환경에서 3Tier 구축 하기 (toy_project)
 date: '2022-09-25'
 author: 장태인
 tags: vm 3tier 
-categories: 3tier
+categories: study
 ---
 
 ![vm3tier](./img/vm3tier.jpg)
