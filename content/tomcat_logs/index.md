@@ -21,6 +21,8 @@ $ vi conf/server.xml
 <Valve className="org.apache.catalina.valves.AccessLogValve" directory="/engn003/logs/was">
 ```
 
+---
+
 $ vi bin/catalina.sh
 
 ```
@@ -32,7 +34,7 @@ CATALINA_OUT=/engn003/logs/catalina.out   
 
 ```
 
-
+---
 
 $ vi logging.properties
 
@@ -73,6 +75,40 @@ host-manager.org.apache.juli.AsyncFileHandler.encoding = UTF-8
 ```
 
 After
+
+```xml
+catalina.org.apache.juli.AsyncFileHandler.level = FINE
+
+catalina.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+
+catalina.org.apache.juli.AsyncFileHandler.prefix = catalina.
+
+catalina.org.apache.juli.AsyncFileHandler.encoding = UTF-8
+
+localhost.org.apache.juli.AsyncFileHandler.level = FINE
+
+localhost.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+
+localhost.org.apache.juli.AsyncFileHandler.prefix = localhost.
+
+localhost.org.apache.juli.AsyncFileHandler.encoding = UTF-8
+
+manager.org.apache.juli.AsyncFileHandler.level = FINE
+
+manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+
+manager.org.apache.juli.AsyncFileHandler.prefix = manager.
+
+manager.org.apache.juli.AsyncFileHandler.encoding = UTF-8
+
+host-manager.org.apache.juli.AsyncFileHandler.level = FINE
+
+host-manager.org.apache.juli.AsyncFileHandler.directory = /engn003/logs
+
+host-manager.org.apache.juli.AsyncFileHandler.prefix = host-manager.
+
+host-manager.org.apache.juli.AsyncFileHandler.encoding = UTF-8
+```
 
 ```toc
 
