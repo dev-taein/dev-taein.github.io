@@ -4,7 +4,7 @@ title: Docker 개발 환경 구성 (toy_project)
 date: '2022-09-21'
 author: 아임해피
 tags: docker docker-compose
-categories: docker
+categories: study
 ---
 
 ![docker-devland](./img/docker-devland.jpg)
