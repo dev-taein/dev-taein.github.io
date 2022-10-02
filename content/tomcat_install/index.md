@@ -1,3 +1,4 @@
+---
 emoji: 🫖
 title: Tomcat 설치하기 (CentOS7)
 date: '2022-10-02'
