@@ -1,5 +1,5 @@
 ---
-emoji: ⚙️
+emoji: 🗄
 title: SVN Install (CentOS7)
 date: '2022-10-06'
 author: 아임해피
@@ -229,7 +229,7 @@ WantedBy=multi-user.target
 
 $ vi /etc/rc.d/rc.local
 
-```
+```bash
 su wasadm -c 'svnserve -d -r /engn002/tools/data/svn_repo'
 ```
 
@@ -274,7 +274,8 @@ $ svn mkdir svn://192.168.56.7/client/branches
 
 $ svn mkdir svn://192.168.56.7/client/tags
 
-[ERROR]
+<details>
+<summary>[ERROR]</summary>
 
 svn: E205007: Could not use external editor to fetch log message; consider setting the $SVN_EDITOR environment variable or using the --message (-m) or --file (-F) options
 
@@ -298,6 +299,9 @@ $ source ~/.bash_profile
     - 계정 아이디 svnadm
     - 패스워드 rootroot
     - 입력 후 끝
+</details>
+
+---
 
 ## 저장소 확인
 
@@ -321,4 +325,3 @@ $ svn co svn://ip 또는 도메인 주소/저장소명
 
 $ svn checkout svn://ip 또는 도메인 주소/저장소명
 
----
