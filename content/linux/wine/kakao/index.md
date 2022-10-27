@@ -53,6 +53,8 @@ Windows 프로그램 실행
 
 $ ./wine 프로그램이름.exe
 
+---
+
 “Xvfb -ac :1 -screen 0 1024x768x16 &” 이 커맨드는 부팅 시 자동으로 실행되게 하기
 
 $ chmod +x /etc/rc.d/rc.local
@@ -70,11 +72,15 @@ $ vi /etc/rc.d/rc.local
 Xvfb -ac :1 -screen 0 1024x768x16 &
 ```
 
+
 카카오톡 설치파일을 wine디렉토리에 넣고
 
 $ ./wine KaKaoTalk.exe 
 
+
 카카오톡을 설치할때 Z드라이버에 설치하기
+
+---
 
 ## 🥃 alias설정
 
@@ -85,6 +91,8 @@ alias kakao='/app/wine-7.0/./wine /app/kakao/KakaoTalk/KakaoTalk.exe > /dev/null
 ```
 
 ## 🍸 한글 설정
+
+---
 
 한글 입력이 안될 때  (참고  [https://wp.openframe.co.kr/?page_id=167&vid=9](https://wp.openframe.co.kr/?page_id=167&vid=9) )
 
@@ -105,6 +113,10 @@ fi
 ```
 
 $ source ~/.bashrc
+
+ibus 설정을 다 했으면 
+
+shift + space 커맨드로 한글/영어 변경 가능
 
 ```toc
 
